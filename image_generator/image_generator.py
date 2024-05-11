@@ -11,7 +11,7 @@ color_map = {
 
 for image_name in color_map.keys():
     # Import an image from directory: 
-    input_image = Image.open("resource\\word\\" + image_name + ".png") 
+    input_image = Image.open("image_generator\\resource\\word\\" + image_name + ".png") 
     
     for color in color_map.keys():
         image1 = Image.new("RGBA", input_image.size)
@@ -36,7 +36,7 @@ for image_name in color_map.keys():
                     pixel_map[i, j] = color_map[color]
     
         # Saving the final output 
-        image1.save("output\\word\\" + image_name + "_" + color + ".png", format="png") 
+        image1.save("image_generator\\output\\word\\" + image_name + "_" + color + ".png", format="png") 
     
         # image1.show()
         
